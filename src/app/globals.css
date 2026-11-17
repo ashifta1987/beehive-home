@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* Key Tags design tokens — see docs/design/DESIGN.md. Components use tokens only. */
+:root {
+  --bg:#ECEEF2; --surface:#FFFFFF; --surface-2:#F4F5F8; --ink:#15171C; --muted:#555B66; --line:#DFE2E8;
+  --accent:#4646E0; --accent-ink:#FFFFFF; --accent-soft:#E5E5FB;
+  --tag1:#FFC542; --tag1-ink:#15171C;
+  --tag2:#4646E0; --tag2-ink:#FFFFFF;
+  --tag3:#1F7A6C; --tag3-ink:#FFFFFF;
+  --tag4:#B0306A; --tag4-ink:#FFFFFF;
+  --airbnb:#B8323F; --airbnb-soft:#FCE4E6; --booking:#2449A8; --booking-soft:#E2E9FA;
+  --direct:#7A5200; --direct-soft:#FFF0C7; --other:#555B66; --other-soft:#EBEDF1;
+  --ok:#1F6B42; --ok-soft:#E3F5EA; --warn:#7E5300; --warn-soft:#FFF0C7;
+  --bad:#B42328; --bad-soft:#FDE4E4; --on-bad:#FFFFFF;
+  --scrim:rgba(14,16,20,.48);
+  --shadow:0 2px 4px rgba(21,23,28,.05),0 12px 32px rgba(21,23,28,.12);
+  --tagshadow:0 6px 16px rgba(21,23,28,.14);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#0E1014; --surface:#171A20; --surface-2:#1F232A; --ink:#EEF0F4; --muted:#9BA2AE; --line:#2A2F38;
+  --accent:#9A9AFF; --accent-ink:#0E1014; --accent-soft:#24254A;
+  --tag1:#FFC542; --tag1-ink:#15171C; --tag2:#5B5BF2; --tag2-ink:#FFFFFF;
+  --tag3:#2A9A88; --tag3-ink:#06201C; --tag4:#D2468A; --tag4-ink:#FFFFFF;
+  --airbnb:#FF8A96; --airbnb-soft:#3B1A1F; --booking:#93B2FF; --booking-soft:#1A2440;
+  --direct:#F5C24A; --direct-soft:#3A2F10; --other:#A9B0BB; --other-soft:#252A32;
+  --ok:#5BD08E; --ok-soft:#14301F; --warn:#F5C24A; --warn-soft:#3A2F10;
+  --bad:#FF7B7F; --bad-soft:#3D1A1C; --on-bad:#1A0507;
+  --scrim:rgba(0,0,0,.64);
+  --shadow:0 2px 4px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --tagshadow:0 6px 16px rgba(0,0,0,.45);
+  color-scheme: dark;
+}}
+:root[data-theme="dark"] {
+  --bg:#0E1014; --surface:#171A20; --surface-2:#1F232A; --ink:#EEF0F4; --muted:#9BA2AE; --line:#2A2F38;
+  --accent:#9A9AFF; --accent-ink:#0E1014; --accent-soft:#24254A;
+  --tag1:#FFC542; --tag1-ink:#15171C; --tag2:#5B5BF2; --tag2-ink:#FFFFFF;
+  --tag3:#2A9A88; --tag3-ink:#06201C; --tag4:#D2468A; --tag4-ink:#FFFFFF;
+  --airbnb:#FF8A96; --airbnb-soft:#3B1A1F; --booking:#93B2FF; --booking-soft:#1A2440;
+  --direct:#F5C24A; --direct-soft:#3A2F10; --other:#A9B0BB; --other-soft:#252A32;
+  --ok:#5BD08E; --ok-soft:#14301F; --warn:#F5C24A; --warn-soft:#3A2F10;
+  --bad:#FF7B7F; --bad-soft:#3D1A1C; --on-bad:#1A0507;
+  --scrim:rgba(0,0,0,.64);
+  --shadow:0 2px 4px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --tagshadow:0 6px 16px rgba(0,0,0,.45);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-tag1: var(--tag1);
+  --color-tag1-ink: var(--tag1-ink);
+  --color-tag2: var(--tag2);
+  --color-tag2-ink: var(--tag2-ink);
+  --color-tag3: var(--tag3);
+  --color-tag3-ink: var(--tag3-ink);
+  --color-tag4: var(--tag4);
+  --color-tag4-ink: var(--tag4-ink);
+  --color-airbnb: var(--airbnb);
+  --color-airbnb-soft: var(--airbnb-soft);
+  --color-booking: var(--booking);
+  --color-booking-soft: var(--booking-soft);
+  --color-direct: var(--direct);
+  --color-direct-soft: var(--direct-soft);
+  --color-other: var(--other);
+  --color-other-soft: var(--other-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-on-bad: var(--on-bad);
+  --color-scrim: var(--scrim);
+  --shadow-card: var(--shadow);
+  --shadow-tag: var(--tagshadow);
+  --radius-card: 24px;
+  --radius-tag: 26px;
+  --radius-input: 13px;
+  --radius-btn: 14px;
+  --radius-btn-sm: 11px;
+  --radius-sheet: 28px;
+  --font-sans: var(--font-inter), var(--font-malayalam), var(--font-devanagari), system-ui, sans-serif;
+  --font-display: var(--font-unbounded), var(--font-inter), system-ui, sans-serif;
+}
+
+html, body { background: var(--bg); color: var(--ink); }
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+.tabular { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; }
+button, [role="button"] { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+input, select, textarea { font: inherit; color: inherit; }
+
+/* Punched hole on a key tag */
+.tag-hole {
+  width: 18px; height: 18px; border-radius: 9999px; background: var(--bg);
+  border: 3px solid currentColor; box-sizing: border-box; flex: none;
+}
+
+.pb-safe { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+.gutter { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+
+@keyframes bh-pulse { 0%,100% { opacity: 1 } 50% { opacity: .5 } }
+.skeleton { background: var(--surface-2); border-radius: 12px; animation: bh-pulse 1.4s ease-in-out infinite; }
+
+@keyframes bh-sheet-up { from { transform: translateY(100%) } to { transform: translateY(0) } }
+@keyframes bh-fade { from { opacity: 0 } to { opacity: 1 } }
+
+@media print {
+  .no-print { display: none !important; }
+  html, body { background: #fff; }
+}

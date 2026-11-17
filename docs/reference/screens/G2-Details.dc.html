@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Guest check-in — Your details</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0}
+a{color:#4646E0}a:hover{color:#2F2FB8}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #ECEEF2; color: #15171C; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 18px 16px 0; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <a href="G1-Welcome.dc.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #15171C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+      <span style="font-size: 13px; font-weight: 600; background: #4646E0; color: #FFFFFF; padding: 6px 12px; border-radius: 99px">2BHK</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; font-weight: 700"><span style="height: 6px; border-radius: 6px; background: #15171C"></span>Details</span>
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: #555B66"><span style="height: 6px; border-radius: 6px; background: #D5D9E0"></span>Photo ID</span>
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: #555B66"><span style="height: 6px; border-radius: 6px; background: #D5D9E0"></span>House rules</span>
+    </div>
+    <h1 style="margin: 4px 4px 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.03em">Who's staying?</h1>
+  </header>
+
+  <form style="margin: 14px 16px 0; background: #FFFFFF; border-radius: 24px; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="g-name" style="font-size: 12.5px; font-weight: 600; color: #555B66">Full name, as on your ID</label>
+      <input id="g-name" type="text" value="Sarah Klein" style="font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid #4646E0; background: #FFFFFF; color: #15171C">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="g-phone" style="font-size: 12.5px; font-weight: 600; color: #555B66">Mobile (WhatsApp)</label>
+      <div style="display: flex; gap: 8px">
+        <button type="button" style="all: unset; cursor: pointer; padding: 0 12px; border-radius: 14px; background: #F4F5F8; font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 4px">+49 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <input id="g-phone" type="tel" value="151 2345 6789" style="flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C">
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12.5px; font-weight: 600; color: #555B66">Adults</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; background: #F4F5F8; border-radius: 14px; padding: 4px">
+          <button type="button" aria-label="Fewer adults" style="all: unset; cursor: pointer; width: 40px; height: 40px; border-radius: 11px; background: #FFFFFF; text-align: center; font-size: 20px; line-height: 40px">−</button>
+          <span style="font-size: 18px; font-weight: 700">2</span>
+          <button type="button" aria-label="More adults" style="all: unset; cursor: pointer; width: 40px; height: 40px; border-radius: 11px; background: #FFFFFF; text-align: center; font-size: 20px; line-height: 40px">+</button>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 12.5px; font-weight: 600; color: #555B66">Children</span>
+        <div style="display: flex; align-items: center; justify-content: space-between; background: #F4F5F8; border-radius: 14px; padding: 4px">
+          <button type="button" aria-label="Fewer children" style="all: unset; cursor: pointer; width: 40px; height: 40px; border-radius: 11px; background: #FFFFFF; text-align: center; font-size: 20px; line-height: 40px">−</button>
+          <span style="font-size: 18px; font-weight: 700">0</span>
+          <button type="button" aria-label="More children" style="all: unset; cursor: pointer; width: 40px; height: 40px; border-radius: 11px; background: #FFFFFF; text-align: center; font-size: 20px; line-height: 40px">+</button>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="g-out" style="font-size: 12.5px; font-weight: 600; color: #555B66">Check-out date</label>
+      <input id="g-out" type="date" value="2026-11-15" style="font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C">
+    </div>
+    <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 12.5px; font-weight: 600; color: #555B66; padding: 0; margin-bottom: 8px">Nationality</legend>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <label style="cursor: pointer; min-height: 48px; border-radius: 14px; background: #F4F5F8; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 600"><input type="radio" name="nat" style="accent-color: #15171C; margin: 0">Indian</label>
+        <label style="cursor: pointer; min-height: 48px; border-radius: 14px; background: #15171C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 600"><input type="radio" name="nat" checked style="accent-color: #FFC542; margin: 0">Other country</label>
+      </div>
+    </fieldset>
+  </form>
+
+  <span style="flex: 1"></span>
+  <div style="padding: 0 16px 24px">
+    <a href="G3-ID.dc.html" style="text-decoration: none; min-height: 58px; border-radius: 20px; background: #15171C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; font-weight: 700">Continue <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFC542" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Guest check-in — Passport and visa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0}
+a{color:#4646E0}a:hover{color:#2F2FB8}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #ECEEF2; color: #15171C; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 18px 16px 0; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <a href="G3-ID.dc.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #15171C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+      <span style="font-size: 13px; font-weight: 600; background: #4646E0; color: #FFFFFF; padding: 6px 12px; border-radius: 99px">2BHK</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: #555B66"><span style="height: 6px; border-radius: 6px; background: #15171C"></span>Details</span>
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; font-weight: 700"><span style="height: 6px; border-radius: 6px; background: linear-gradient(90deg, #15171C 80%, #D5D9E0 80%)"></span>Photo ID</span>
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: #555B66"><span style="height: 6px; border-radius: 6px; background: #D5D9E0"></span>House rules</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px">
+      <span style="align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; background: #FFC542; padding: 3px 8px; border-radius: 6px">FOREIGN GUESTS</span>
+      <h1 style="margin: 4px 0 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.03em">Passport &amp; visa</h1>
+      <p style="margin: 0; font-size: 14px; color: #555B66">Your host must register foreign guests with FRRO (Form C) within 24 hours of arrival.</p>
+    </div>
+  </header>
+
+  <form style="margin: 12px 16px 0; background: #FFFFFF; border-radius: 24px; padding: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px">
+    <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 5px"><label for="p-nat" style="font-size: 12px; font-weight: 600; color: #555B66">Nationality</label><input id="p-nat" type="text" value="German" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C"></div>
+    <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0"><label for="p-no" style="font-size: 12px; font-weight: 600; color: #555B66">Passport number</label><input id="p-no" type="text" value="C01X00T47" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C; min-width: 0"></div>
+    <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0"><label for="p-exp" style="font-size: 12px; font-weight: 600; color: #555B66">Valid until</label><input id="p-exp" type="date" value="2031-04-02" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C; min-width: 0"></div>
+    <fieldset style="grid-column: 1 / -1; border: 0; padding: 0; margin: 0">
+      <legend style="font-size: 12px; font-weight: 600; color: #555B66; padding: 0; margin-bottom: 6px">Visa type</legend>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px">
+        <label style="cursor: pointer; padding: 8px 13px; border-radius: 99px; background: #15171C; color: #FFFFFF; font-size: 13px; font-weight: 600"><input type="radio" name="vt" checked style="position: absolute; opacity: 0">e-Tourist</label>
+        <label style="cursor: pointer; padding: 8px 13px; border-radius: 99px; background: #F4F5F8; font-size: 13px; font-weight: 600"><input type="radio" name="vt" style="position: absolute; opacity: 0">Tourist</label>
+        <label style="cursor: pointer; padding: 8px 13px; border-radius: 99px; background: #F4F5F8; font-size: 13px; font-weight: 600"><input type="radio" name="vt" style="position: absolute; opacity: 0">Business</label>
+        <label style="cursor: pointer; padding: 8px 13px; border-radius: 99px; background: #F4F5F8; font-size: 13px; font-weight: 600"><input type="radio" name="vt" style="position: absolute; opacity: 0">OCI</label>
+        <label style="cursor: pointer; padding: 8px 13px; border-radius: 99px; background: #F4F5F8; font-size: 13px; font-weight: 600"><input type="radio" name="vt" style="position: absolute; opacity: 0">Other</label>
+      </div>
+    </fieldset>
+    <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0"><label for="v-no" style="font-size: 12px; font-weight: 600; color: #555B66">Visa number</label><input id="v-no" type="text" placeholder="From your e-Visa" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid #4646E0; background: #FFFFFF; color: #15171C; min-width: 0"></div>
+    <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0"><label for="v-exp" style="font-size: 12px; font-weight: 600; color: #555B66">Visa valid until</label><input id="v-exp" type="date" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C; min-width: 0"></div>
+    <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0"><label for="a-in" style="font-size: 12px; font-weight: 600; color: #555B66">Arrived in India on</label><input id="a-in" type="date" value="2026-11-08" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C; min-width: 0"></div>
+    <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0"><label for="a-from" style="font-size: 12px; font-weight: 600; color: #555B66">Coming from</label><input id="a-from" type="text" value="Munnar" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C; min-width: 0"></div>
+    <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 5px"><label for="a-next" style="font-size: 12px; font-weight: 600; color: #555B66">Next destination</label><input id="a-next" type="text" placeholder="e.g. Alleppey" style="font: inherit; font-size: 15px; padding: 11px 12px; border-radius: 13px; border: 1.5px solid transparent; background: #F4F5F8; color: #15171C"></div>
+  </form>
+
+  <span style="flex: 1"></span>
+  <div style="padding: 0 16px 24px">
+    <a href="G5-Rules.dc.html" style="text-decoration: none; min-height: 58px; border-radius: 20px; background: #15171C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; font-weight: 700">Continue <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFC542" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

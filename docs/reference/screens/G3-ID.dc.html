@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Guest check-in — Photo ID</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0}
+a{color:#4646E0}a:hover{color:#2F2FB8}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #ECEEF2; color: #15171C; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="padding: 18px 16px 0; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <a href="G2-Details.dc.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #15171C"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+      <span style="font-size: 13px; font-weight: 600; background: #4646E0; color: #FFFFFF; padding: 6px 12px; border-radius: 99px">2BHK</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: #555B66"><span style="height: 6px; border-radius: 6px; background: #15171C"></span>Details</span>
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; font-weight: 700"><span style="height: 6px; border-radius: 6px; background: linear-gradient(90deg, #15171C 50%, #D5D9E0 50%)"></span>Photo ID</span>
+      <span style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: #555B66"><span style="height: 6px; border-radius: 6px; background: #D5D9E0"></span>House rules</span>
+    </div>
+    <h1 style="margin: 4px 4px 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.03em">Add a photo ID</h1>
+    <p style="margin: -6px 4px 0; font-size: 14px; color: #555B66">Indian law requires your host to keep an ID copy for every adult guest.</p>
+  </header>
+
+  <section style="margin: 14px 16px 0; background: #FFFFFF; border-radius: 24px; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+    <fieldset style="border: 0; padding: 0; margin: 0">
+      <legend style="font-size: 12.5px; font-weight: 600; color: #555B66; padding: 0; margin-bottom: 8px">ID type</legend>
+      <div style="display: flex; flex-wrap: wrap; gap: 6px">
+        <label style="cursor: pointer; padding: 9px 14px; border-radius: 99px; background: #15171C; color: #FFFFFF; font-size: 13.5px; font-weight: 600; display: flex; gap: 6px; align-items: center"><input type="radio" name="idt" checked style="position: absolute; opacity: 0">Passport</label>
+        <label style="cursor: pointer; padding: 9px 14px; border-radius: 99px; background: #F4F5F8; font-size: 13.5px; font-weight: 600"><input type="radio" name="idt" style="position: absolute; opacity: 0">Aadhaar</label>
+        <label style="cursor: pointer; padding: 9px 14px; border-radius: 99px; background: #F4F5F8; font-size: 13.5px; font-weight: 600"><input type="radio" name="idt" style="position: absolute; opacity: 0">Driving licence</label>
+        <label style="cursor: pointer; padding: 9px 14px; border-radius: 99px; background: #F4F5F8; font-size: 13.5px; font-weight: 600"><input type="radio" name="idt" style="position: absolute; opacity: 0">Voter ID</label>
+      </div>
+    </fieldset>
+
+    <div style="display: flex; gap: 12px; align-items: center; background: #F4F5F8; border-radius: 18px; padding: 10px">
+      <span style="width: 92px; height: 64px; border-radius: 10px; background: #D9DDE5; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 0 10px; box-sizing: border-box; flex: none" aria-hidden="true"><span style="display: flex; gap: 6px; align-items: center"><span style="width: 20px; height: 24px; border-radius: 4px; background: #B5BBC6"></span><span style="flex: 1; display: flex; flex-direction: column; gap: 4px"><span style="height: 4px; border-radius: 2px; background: #B5BBC6"></span><span style="height: 4px; width: 70%; border-radius: 2px; background: #B5BBC6"></span></span></span><span style="height: 4px; border-radius: 2px; background: #B5BBC6"></span></span>
+      <span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 700">Adult 1 · Sarah Klein</span><span style="font-size: 12.5px; color: #1F6B42; font-weight: 600; display: flex; gap: 4px; align-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Photo added</span></span>
+      <button type="button" style="all: unset; cursor: pointer; font-size: 13px; font-weight: 600; color: #4646E0; padding: 10px 6px">Retake</button>
+    </div>
+
+    <button type="button" style="all: unset; cursor: pointer; border: 2px dashed #C9CED8; border-radius: 18px; min-height: 132px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center">
+      <span style="width: 52px; height: 52px; border-radius: 50%; background: #FFC542; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+      <span style="font-size: 15px; font-weight: 700">Adult 2 · take a photo</span>
+      <span style="font-size: 12.5px; color: #555B66">Passport photo page · all four corners, no glare</span>
+    </button>
+  </section>
+
+  <p style="margin: 12px 24px 0; font-size: 12.5px; color: #555B66; display: flex; gap: 6px; align-items: flex-start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex: none; margin-top: 1px" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Photos are sent straight to your host and are never shown on this page again.</p>
+
+  <span style="flex: 1"></span>
+  <div style="padding: 0 16px 24px">
+    <a href="G4-Passport.dc.html" style="text-decoration: none; min-height: 58px; border-radius: 20px; background: #15171C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; font-weight: 700">Continue <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFC542" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
