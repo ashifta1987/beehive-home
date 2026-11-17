@@ -89,3 +89,4 @@ export function daysInMonth(ym: string): number {
   const [y, m] = ym.split("-").map(Number);
   return new Date(Date.UTC(y, m, 0)).getUTCDate();
 }
+

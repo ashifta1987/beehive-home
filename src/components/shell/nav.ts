@@ -80,3 +80,4 @@ export const barFor = (role: Role) => (role === "owner" ? OWNER_BAR : HOUSEKEEPE
 
 /** Paths a housekeeper may open (everything else redirects to /jobs). */
 export const HOUSEKEEPER_PATHS = ["/jobs", "/care", "/laundry", "/maintenance", "/petty", "/assets", "/apartments", "/settings"];
+

@@ -366,3 +366,4 @@ export interface Alert {
   href?: string;
   apartment_id?: string | null;
 }
+

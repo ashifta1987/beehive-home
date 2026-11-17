@@ -1,1 +1,57 @@
-{}
+{
+  "title": "Guests",
+  "subtitle": "Every guest from your bookings, with stay history, notes and tags",
+  "empty": {
+    "title": "No guests yet",
+    "body": "Guests appear here automatically when you add bookings.",
+    "action": "New booking"
+  },
+  "stats": {
+    "guests": "Guests",
+    "repeat": "Repeat guests",
+    "foreign": "Foreign guests",
+    "blocked": "Do not host",
+    "stays": "Stays",
+    "nights": "Nights"
+  },
+  "filterLabel": "Show guests",
+  "filters": {
+    "all": "All",
+    "repeat": "Repeat",
+    "vip": "VIP",
+    "blocked": "Do not host"
+  },
+  "tags": {
+    "none": "No tag",
+    "repeat": "Repeat guest",
+    "vip": "VIP",
+    "blocked": "Do not host"
+  },
+  "searchLabel": "Search guests",
+  "searchPh": "Search name, phone, email, city",
+  "returning": "Returning",
+  "ratingLabel": "Rated {n} out of 5",
+  "noContact": "No phone or email",
+  "netSpend": "Net spend",
+  "staysLine": "{stays, plural, one {# stay} other {# stays}} · {nights, plural, one {# night} other {# nights}}",
+  "lastStay": "last {date}",
+  "missing": "{count, plural, one {# missing-item report} other {# missing-item reports}}",
+  "foreign": "Foreign national",
+  "noMatchTitle": "No guests match",
+  "noMatchBody": "Try a different name or phone number, or show all guests.",
+  "clear": "Show all guests",
+  "whatsapp": "WhatsApp",
+  "waHello": "Hi {name}, ",
+  "history": "Stay history",
+  "profile": "Profile",
+  "tag": "Tag",
+  "blockedHint": "You will see a red warning when you add a booking for this guest.",
+  "rating": "Your rating",
+  "noRating": "None",
+  "nationality": "Nationality",
+  "city": "City",
+  "notes": "Notes",
+  "notesHint": "Only you see these",
+  "saveProfile": "Save profile",
+  "saved": "Guest profile saved"
+}

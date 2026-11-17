@@ -1,1 +1,26 @@
-{}
+{
+  "title": "Door posters",
+  "subtitle": "Print one A5 poster per apartment and stick it on the door.",
+  "back": "Back to check-ins",
+  "print": "Print posters",
+  "posterFor": "Door poster for {name}",
+  "posterHeading": "Guest check-in",
+  "qrAlt": "QR code to check in to {name}",
+  "lineEn": "Scan this QR with your phone camera to check in. It takes about 2 minutes.",
+  "lineMl": "ചെക്ക്-ഇൻ ചെയ്യാൻ ഫോൺ ക്യാമറ ഉപയോഗിച്ച് ഈ QR സ്കാൻ ചെയ്യുക. ഏകദേശം 2 മിനിറ്റ് മതി.",
+  "lineHi": "चेक-इन के लिए अपने फ़ोन कैमरे से यह QR स्कैन करें। इसमें लगभग 2 मिनट लगते हैं।",
+  "footer": "Beehive Home · Panampilly Nagar, Kochi",
+  "rotate": "Rotate key",
+  "rotateTitle": "Rotate the {code} door key?",
+  "rotateBody": "A new key is made straight away and the poster on the door stops working. Print the new poster and put it up right after.",
+  "rotateConfirm": "Rotate key",
+  "rotated": "New key ready. Print the new poster and replace the old one.",
+  "createKey": "Create door key",
+  "working": "Working…",
+  "cancel": "Cancel",
+  "noKey": "This apartment has no door key yet. Create one to print its poster.",
+  "empty": "No apartments yet",
+  "emptyBody": "Add an apartment first, then come back here to print its door poster.",
+  "loadError": "We could not load the door keys. Reload the page to try again.",
+  "siteWarning": "NEXT_PUBLIC_SITE_URL is not set, so the QR points to {origin}. Set it to the live address before you print."
+}

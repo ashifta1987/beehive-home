@@ -108,6 +108,24 @@ create index if not exists beehive_issues_reported_by_idx on public.beehive_issu
 create index if not exists beehive_issues_resolved_by_idx on public.beehive_issues(resolved_by);
 create or replace trigger beehive_issues_updated_at before update on public.beehive_issues
   for each row execute function public.beehive_set_updated_at();
+-- Housekeepers may edit the text/category/priority of their own reports, but only the
+-- owner resolves issues or changes links and costs.
+create or replace function public.beehive_issues_guard()
+returns trigger language plpgsql
+set search_path = public
+as $$
+begin
+  if public.beehive_is_owner() or auth.uid() is null then
+    return new;
+  end if;
+  new.status := old.status; new.resolved_at := old.resolved_at; new.resolved_by := old.resolved_by;
+  new.resolution := old.resolution; new.cost := old.cost; new.booking_id := old.booking_id;
+  new.task_id := old.task_id; new.reported_by := old.reported_by; new.created_at := old.created_at;
+  return new;
+end $$;
+create or replace trigger beehive_issues_guard before update on public.beehive_issues
+  for each row execute function public.beehive_issues_guard();
+
 alter table public.beehive_issues enable row level security;
 revoke all on table public.beehive_issues from anon;
 create policy beehive_issues_staff_select on public.beehive_issues for select to authenticated
@@ -220,3 +238,4 @@ alter table public.beehive_laundry enable row level security;
 revoke all on table public.beehive_laundry from anon;
 create policy beehive_laundry_staff_all on public.beehive_laundry for all to authenticated
   using ((select public.beehive_is_staff())) with check ((select public.beehive_is_staff()));
+

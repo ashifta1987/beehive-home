@@ -1,1 +1,46 @@
-{}
+{
+  "title": "Licences",
+  "subtitle": "Registrations, licences, insurance and agreements with their expiry dates. Today reminds you before each one expires.",
+  "loadError": "Licences could not be loaded. Check your connection and try again.",
+  "add": "Add licence",
+  "addFirst": "Add first licence",
+  "edit": "Edit",
+  "empty": {
+    "title": "No licences recorded",
+    "body": "Add each registration, licence, insurance policy or agreement you hold for the apartments, with its number and expiry date. Check with your local authority and your accountant which ones apply to short-stay rentals; this app does not decide that for you."
+  },
+  "status": {
+    "expired": "Expired {date}",
+    "expiring": "Renew by {date} ({days, plural, =0 {expires today} one {# day left} other {# days left}})",
+    "valid": "Valid until {date}",
+    "none": "No expiry date"
+  },
+  "meta": {
+    "number": "No. {number}",
+    "issued": "issued {date}",
+    "remind": "reminder {days, plural, one {# day} other {# days}} before"
+  },
+  "form": {
+    "newTitle": "New licence",
+    "editTitle": "Edit licence",
+    "name": "Name",
+    "nameHint": "Use the name printed on the document.",
+    "nameRequired": "Enter the licence name.",
+    "number": "Number",
+    "issuedBy": "Issued by",
+    "apartment": "Applies to",
+    "issued": "Issued on",
+    "expires": "Expires on",
+    "expiresHint": "Leave empty if it does not expire.",
+    "expiresBefore": "The expiry date must be after the issue date.",
+    "remindDays": "Remind me (days before)",
+    "remindHint": "Today shows a reminder this many days before expiry.",
+    "remindInvalid": "Enter whole days from 0 to 730.",
+    "note": "Note",
+    "noteHint": "Where the original is kept, renewal steps, fees paid",
+    "saved": "Licence saved",
+    "deleted": "Licence deleted",
+    "deleteTitle": "Delete this licence?",
+    "deleteBody": "The licence and its reminder will be removed. This cannot be undone."
+  }
+}

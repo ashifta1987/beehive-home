@@ -183,3 +183,4 @@ alter table public.beehive_digests enable row level security;
 revoke all on table public.beehive_digests from anon;
 create policy beehive_digests_owner_select on public.beehive_digests for select to authenticated
   using ((select public.beehive_is_owner()));
+

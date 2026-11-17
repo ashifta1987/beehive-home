@@ -7,7 +7,7 @@
  */
 import { ZodError } from "zod";
 
-export type ActionResult<T = undefined> = { ok: true; data?: T } | { ok: false; error: string };
+export type ActionResult<T = void> = { ok: true; data?: T } | { ok: false; error: string };
 
 export async function action<T>(fn: () => Promise<T>): Promise<ActionResult<T>> {
   try {
@@ -48,3 +48,4 @@ export function check<T>(res: { data: T; error: unknown }): T {
 
 /** Empty string → null for optional text fields. */
 export const blank = (v: unknown) => (typeof v === "string" && v.trim() === "" ? null : v);
+

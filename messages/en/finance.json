@@ -1,1 +1,58 @@
-{}
+{
+  "title": "Finance",
+  "subtitle": "Income is split by night, so a stay across two months counts in both. Expenses include the expense ledger and petty cash spends.",
+  "goExpenses": "Expenses",
+  "goPetty": "Petty cash",
+  "prevMonth": "Previous month",
+  "nextMonth": "Next month",
+  "thisMonth": "This month",
+  "stats": {
+    "gross": "Booking value",
+    "commission": "Commission",
+    "extras": "Paid extras",
+    "net": "Net income (rooms + extras)",
+    "expenses": "Expenses",
+    "pettyPart": "incl. {amount} petty cash",
+    "profit": "Profit",
+    "occupancy": "Occupancy",
+    "avgRate": "Avg rate per night",
+    "nights": "Nights booked"
+  },
+  "chart": {
+    "title": "Last 12 months",
+    "income": "Net income incl. extras",
+    "expenses": "Expenses",
+    "aria": "Bar chart of net income including extras and expenses for the 12 months up to {month}. The table below has the same numbers.",
+    "bar": "{month}: net income {income}, expenses {expenses}",
+    "showTable": "Show as a table",
+    "month": "Month",
+    "profit": "Profit",
+    "openMonth": "Open {month}"
+  },
+  "byApartment": {
+    "title": "By apartment",
+    "apartment": "Apartment",
+    "nights": "Nights",
+    "occupancy": "Occupancy",
+    "income": "Net income",
+    "expenses": "Expenses",
+    "profit": "Profit",
+    "note": "Bills for both apartments are split evenly between them.",
+    "none": "Add an apartment to see figures per apartment."
+  },
+  "byChannel": {
+    "title": "By channel",
+    "channel": "Channel",
+    "bookings": "Bookings",
+    "nights": "Nights",
+    "value": "Value",
+    "commission": "Commission",
+    "net": "Net",
+    "none": "No bookings this month."
+  },
+  "where": {
+    "title": "Where the money went",
+    "petty": "Petty cash: {category}",
+    "none": "No expenses recorded this month. Add bills in Expenses and the housekeeper's spends in Petty cash."
+  }
+}

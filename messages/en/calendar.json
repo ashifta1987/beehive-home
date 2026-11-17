@@ -1,1 +1,21 @@
-{}
+{
+  "title": "Calendar",
+  "subtitle": "Tap an empty day to add a booking. Tap a booking to edit it.",
+  "newBooking": "New booking",
+  "monthNav": "Choose month",
+  "prevMonth": "Previous month",
+  "nextMonth": "Next month",
+  "thisMonth": "This month",
+  "apartment": "Apartment",
+  "gridLabel": "Bookings in {month}",
+  "booked": "{pct}% booked",
+  "newOn": "New booking in {apartment} on {date}",
+  "barLabel": "{guest}, {from} to {to}, {channel}. Tap to edit.",
+  "barSub": "{nights, plural, one {# night} other {# nights}} · {guests, plural, one {# guest} other {# guests}}",
+  "legend": "Bars start at check-in afternoon and end at check-out morning.",
+  "listTitle": "Stays in {month}",
+  "listEmpty": "No bookings this month. Tap an empty day above to add one.",
+  "noApartmentsTitle": "No apartments yet",
+  "noApartmentsBody": "Add an apartment first, then its bookings show here.",
+  "addApartment": "Add apartment"
+}

@@ -1,1 +1,80 @@
-{}
+{
+  "title": "Maintenance",
+  "subtitle": "Repairs, breakages, hygiene problems, low supplies and missing items",
+  "you": "you",
+  "loadError": "We could not load the issues. Check your connection and refresh the page.",
+  "filterLabel": "Show issues",
+  "filter": {
+    "open": "Open",
+    "resolved": "Resolved",
+    "all": "All"
+  },
+  "empty": {
+    "title": "No issues reported",
+    "body": "Tap “Report an issue” for a broken tap, an AC that is not cooling, low supplies or anything missing after a checkout."
+  },
+  "noneOpen": "No open issues. Well done.",
+  "noneResolved": "Nothing resolved yet.",
+  "category": {
+    "maintenance": "General repair",
+    "electrical": "Electrical",
+    "plumbing": "Plumbing",
+    "appliance": "Appliance / AC",
+    "hygiene": "Hygiene",
+    "supplies": "Supplies low",
+    "damage": "Damage",
+    "missing": "Missing item / theft",
+    "mess": "Room left messy",
+    "other": "Other"
+  },
+  "priority": {
+    "low": "Low",
+    "normal": "Normal",
+    "urgent": "Urgent"
+  },
+  "resolvedPill": "Resolved",
+  "guest": "Guest: {name}",
+  "extraHours": "about {hours} h extra cleaning",
+  "reported": "Reported {when}",
+  "reportedBy": "Reported {when} by {who}",
+  "resolvedAt": "Resolved {when}",
+  "resolvedBy": "Resolved {when} by {who}",
+  "decideCharge": "Decide whether to charge {guest}.",
+  "reopen": "Reopen",
+  "reopened": "Issue reopened",
+  "form": {
+    "add": "Report an issue",
+    "addTitle": "Report an issue",
+    "editTitle": "Edit issue",
+    "category": "What kind",
+    "priority": "How urgent",
+    "text": "What is wrong",
+    "textPh": "Where it is and what happens, e.g. Bathroom tap in 2BHK keeps dripping",
+    "photos": "Send photos to the owner on WhatsApp if it helps.",
+    "submit": "Report",
+    "reported": "Reported. The owner can see it now.",
+    "saved": "Issue saved"
+  },
+  "resolve": {
+    "button": "Resolve",
+    "title": "Resolve issue",
+    "resolution": "What was done",
+    "resolutionPh": "e.g. Plumber replaced the tap washer",
+    "cost": "Repair cost (₹)",
+    "costHint": "Optional. Record the payment in Expenses or Petty cash too.",
+    "chargeTitle": "Charge {guest}?",
+    "chargeBody": "“{name}” is added to their booking as an extra.",
+    "chargeAmount": "Charge (₹)",
+    "chargeHint": "Leave empty or 0 for no charge.",
+    "fromDeposit": "Take it from the {amount} deposit",
+    "fromDepositHint": "Marks the deposit as deducted and the charge as paid.",
+    "overDeposit": "The charge is more than the deposit, so it cannot all come from it.",
+    "platformHint": "For Airbnb or Booking.com guests, also claim it through the platform’s damage or extra-cleaning process.",
+    "submit": "Mark resolved",
+    "saved": "Resolved",
+    "charged": "Resolved. Charge added to the booking."
+  },
+  "deleteTitle": "Delete this issue?",
+  "deleteBody": "The report will be removed. This cannot be undone.",
+  "deleted": "Issue deleted"
+}

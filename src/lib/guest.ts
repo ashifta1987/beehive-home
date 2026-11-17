@@ -57,3 +57,4 @@ export function welcomeMessage(b: Booking, apt: Apartment, extras: Extra[]): str
 export const CHANNEL_LABEL: Record<string, string> = {
   airbnb: "Airbnb", booking: "Booking.com", direct: "Direct", other: "Other",
 };
+

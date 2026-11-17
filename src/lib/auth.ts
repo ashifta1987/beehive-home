@@ -53,3 +53,4 @@ export async function requireOwner(): Promise<Session & { staff: Staff }> {
   if (s.staff.role !== "owner") throw new AuthError("Not allowed");
   return s;
 }
+

@@ -21,3 +21,4 @@ export const CHANNEL_CLASSES: Record<string, string> = {
   direct: "bg-direct-soft text-direct",
   other: "bg-other-soft text-other",
 };
+

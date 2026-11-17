@@ -1,1 +1,105 @@
-{}
+{
+  "title": "Paid extras",
+  "subtitle": "Appliances, the party hall and other paid add-ons, plus charges such as extra cleaning. Add them to a booking: the housekeeper sees what to set up and collect, and the money shows in Finance.",
+  "add": "Add extra",
+  "addTitle": "Add extra",
+  "editTitle": "Edit extra",
+  "edit": "Edit",
+  "editAria": "Edit {name}",
+  "setPrice": "Set price",
+  "setPriceAria": "Set the price for {name}",
+  "stats": {
+    "month": "Extras this month",
+    "items": "{count, plural, =0 {No items} one {# item} other {# items}}",
+    "unpaid": "Unpaid after check-out",
+    "offered": "On offer"
+  },
+  "catalog": {
+    "title": "What you offer",
+    "notOffered": "Not offered",
+    "returnCheck": "Check on return",
+    "youHave": "You have {qty}",
+    "deposit": "+ {amount} deposit",
+    "setupNote": "Set-up: {note}",
+    "both": "Both apartments",
+    "tip": "Tip: add '{extras}' to the welcome message in Apartments so guests see what they can book.",
+    "emptyTitle": "Nothing on offer yet",
+    "emptyBody": "Tap \"Add extra\" to list an air fryer, a BBQ maker, party hall hours or a cleaning charge."
+  },
+  "units": {
+    "use": "per use",
+    "day": "per day",
+    "night": "per night",
+    "hour": "per hour",
+    "event": "per event",
+    "item": "per item"
+  },
+  "unitCount": {
+    "use": "{count, plural, one {# use} other {# uses}}",
+    "day": "{count, plural, one {# day} other {# days}}",
+    "night": "{count, plural, one {# night} other {# nights}}",
+    "hour": "{count, plural, one {# hour} other {# hours}}",
+    "event": "{count, plural, one {# event} other {# events}}",
+    "item": "{count, plural, one {# item} other {# items}}"
+  },
+  "fields": {
+    "name": "Name",
+    "namePlaceholder": "e.g. Air fryer",
+    "price": "Price (₹)",
+    "priceHint": "Leave empty until you decide the price.",
+    "unit": "Charged",
+    "apartment": "Available in",
+    "qty": "How many you have",
+    "qtyHint": "Used to warn about double bookings of the same item.",
+    "deposit": "Deposit (₹)",
+    "description": "Description for guests",
+    "setupNote": "Set-up note for the housekeeper",
+    "setupPlaceholder": "e.g. Place on the pantry counter with the manual",
+    "returnCheck": "Check it is returned",
+    "returnCheckHint": "Adds it to the turnover job's collect & check list.",
+    "active": "Offered to guests",
+    "activeHint": "Turn off for charges only you add, like extra cleaning."
+  },
+  "orders": {
+    "title": "Upcoming and in use",
+    "hint": "Booked extras for stays that have not ended yet.",
+    "empty": "No extras booked for upcoming stays. Open a booking and add paid extras there.",
+    "unpaidTitle": "Unpaid after check-out",
+    "unpaidHint": "The guest has left but these are not marked paid yet.",
+    "unpaidEmpty": "All extras from past stays are paid.",
+    "guestStay": "{guest} · {dates}",
+    "qtyUnits": "{qty} × {units}",
+    "checkout": "Left {date}"
+  },
+  "status": {
+    "requested": "Requested",
+    "confirmed": "Confirmed",
+    "delivered": "Given to guest",
+    "returned": "Returned",
+    "cancelled": "Cancelled"
+  },
+  "actions": {
+    "confirm": "Confirm",
+    "deliver": "Given to guest",
+    "return": "Returned",
+    "cancel": "Cancel extra",
+    "cancelConfirm": "Cancel this extra? It will no longer count in income.",
+    "cancelYes": "Yes, cancel it",
+    "keep": "Keep it",
+    "markPaid": "Mark paid",
+    "markUnpaid": "Mark unpaid"
+  },
+  "paid": "Paid",
+  "unpaid": "Unpaid",
+  "updated": "Updated",
+  "cancel": "Cancel",
+  "save": "Save extra",
+  "saving": "Saving…",
+  "saved": "Extra saved",
+  "errors": {
+    "name": "Give the extra a name.",
+    "price": "Enter the price in whole rupees, or leave it empty.",
+    "qty": "Enter a whole number, or leave it empty.",
+    "deposit": "Enter the deposit in whole rupees, or leave it empty."
+  }
+}

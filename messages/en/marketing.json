@@ -1,1 +1,100 @@
-{}
+{
+  "title": "Marketing",
+  "subtitle": "Where your bookings come from, your listings, review requests and offers.",
+  "loadError": "Marketing could not be loaded. Check your connection and try again.",
+  "mix": {
+    "title": "Channel mix · last 90 days",
+    "row": "{count, plural, one {# booking} other {# bookings}} · {share}% · net {net}",
+    "empty": "No bookings started in the last 90 days.",
+    "note": "Counted by check-in date. Net is the booking total minus channel commission. Direct bookings save commission, so invite happy guests to book direct next time."
+  },
+  "reviews": {
+    "title": "Ask for a review",
+    "empty": "Guests who left in the last 3 weeks and have a phone number appear here until you ask them.",
+    "left": "Left {date} · {apt}",
+    "whatsapp": "WhatsApp",
+    "markAsked": "Mark asked",
+    "marked": "Marked as asked",
+    "badPhone": "Phone number not usable",
+    "message": "Hi {guest}, thank you for staying at Beehive Home, {apartment}. If you enjoyed your stay, a short review on {platform} would help us a lot. For your next visit to Kochi, message me here to book directly."
+  },
+  "listings": {
+    "title": "Listings",
+    "empty": "No listings recorded. Add your Airbnb, Booking.com or other listing to keep its link, price and rating in one place.",
+    "noApts": "No apartments yet",
+    "noAptsBody": "Add your apartments first, then record a listing for each one."
+  },
+  "listingStatus": {
+    "live": "Live",
+    "paused": "Paused",
+    "draft": "Draft"
+  },
+  "listing": {
+    "add": "Add listing",
+    "edit": "Edit",
+    "open": "Open",
+    "newTitle": "New listing",
+    "editTitle": "Edit listing",
+    "apartment": "Apartment",
+    "channel": "Channel",
+    "titleField": "Listing title",
+    "url": "Listing link",
+    "urlInvalid": "Start the link with https://",
+    "price": "Nightly price (₹)",
+    "priceHint": "Whole rupees, as shown on the listing",
+    "status": "Status",
+    "rating": "Rating",
+    "ratingHint": "Out of 5, e.g. 4.85",
+    "reviews": "Number of reviews",
+    "note": "To improve",
+    "noteHint": "Photos, amenities, description",
+    "perNight": "{price}/night",
+    "reviewCount": "{count, plural, one {# review} other {# reviews}}",
+    "saved": "Listing saved",
+    "deleted": "Listing deleted",
+    "deleteTitle": "Delete this listing?",
+    "deleteBody": "This removes the listing from Beehive Home only. Your listing on the channel is not changed."
+  },
+  "campaigns": {
+    "title": "Campaigns & offers",
+    "emptyTitle": "No campaigns yet",
+    "emptyBody": "Track offers such as a weekly-stay discount, an Instagram post or a festival-season price, and note what they brought in."
+  },
+  "campaignChannel": {
+    "all": "All channels",
+    "airbnb": "Airbnb",
+    "booking": "Booking.com",
+    "direct": "Direct",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "google": "Google"
+  },
+  "campaignState": {
+    "running": "Running",
+    "planned": "Planned",
+    "ended": "Ended"
+  },
+  "campaign": {
+    "add": "Add campaign",
+    "edit": "Edit",
+    "newTitle": "New campaign",
+    "editTitle": "Edit campaign",
+    "name": "Campaign or offer",
+    "nameHint": "e.g. Weekly stay discount",
+    "nameRequired": "Enter a name for the campaign.",
+    "channel": "Where",
+    "spend": "Spend (₹)",
+    "spendShort": "spend {amount}",
+    "start": "Starts",
+    "end": "Ends",
+    "endBefore": "The end date must be on or after the start date.",
+    "offer": "Details",
+    "result": "Result",
+    "resultHint": "Bookings or enquiries it brought in",
+    "resultLabel": "Result:",
+    "saved": "Campaign saved",
+    "deleted": "Campaign deleted",
+    "deleteTitle": "Delete this campaign?",
+    "deleteBody": "The campaign and its notes will be removed. This cannot be undone."
+  }
+}

@@ -1,1 +1,66 @@
-{}
+{
+  "title": "Foreign guests",
+  "subtitle": "Passport, visa and Form C for guests who are not Indian nationals. Tick \"Foreign national\" on a booking to add the guest here.",
+  "portal": "FRRO Form C portal",
+  "loadError": "Foreign guest records could not be loaded. Check your connection and try again.",
+  "guests": "{count, plural, one {# guest} other {# guests}}",
+  "passportShort": "Passport {no}",
+  "openRecord": "Open record",
+  "fillRecord": "Fill record",
+  "how": {
+    "title": "How Form C works",
+    "step1": "At check-in, collect a copy of the passport photo page and the visa page.",
+    "step2": "Fill the record here so you have the details in one place.",
+    "step3": "Submit Form C on the FRRO portal within 24 hours of the guest's arrival. You need an accommodation login on the portal; this app does not submit it for you.",
+    "step4": "Enter the Form C reference number and tick \"Form C submitted\"."
+  },
+  "group": {
+    "due": "Form C due",
+    "soon": "Arriving soon",
+    "submitted": "Submitted"
+  },
+  "empty": {
+    "title": "No foreign guests yet",
+    "body": "When you add a booking, tick \"Foreign national\" and the guest appears here with their Form C checklist.",
+    "due": "Nothing due. Well done.",
+    "soon": "No upcoming foreign guests.",
+    "submitted": "No submitted records yet."
+  },
+  "flag": {
+    "submitted": "Form C submitted",
+    "submittedRef": "Form C submitted · {ref}",
+    "dueNow": "Form C due now",
+    "dueTomorrow": "Arrives tomorrow · Form C due",
+    "within24": "Submit within 24 h of arrival",
+    "docsOk": "Passport and visa copies collected",
+    "docsMissing": "Collect passport and visa copies"
+  },
+  "warn": {
+    "visaShort": "Visa ends before check-out",
+    "passportShort": "Passport ends before check-out",
+    "visa": "The visa ends before the check-out date. Ask the guest about their plans before they arrive.",
+    "passport": "The passport ends before the check-out date. Check the dates with the guest."
+  },
+  "form": {
+    "title": "Foreign guest record",
+    "portalNote": "Submit Form C within 24 hours of arrival on the",
+    "nationality": "Nationality",
+    "nationalityRequired": "Enter the nationality.",
+    "passportNo": "Passport number",
+    "passportExpiry": "Passport valid until",
+    "visaNo": "Visa number",
+    "visaType": "Visa type",
+    "visaTypeHint": "e-Tourist, Business",
+    "visaExpiry": "Visa valid until",
+    "arrivedIndia": "Arrived in India on",
+    "arrivingFrom": "Arriving from (city, country)",
+    "nextDestination": "Next destination",
+    "docsCollected": "Passport and visa copies collected",
+    "formCSubmitted": "Form C submitted on the FRRO portal",
+    "formCRef": "Form C reference number",
+    "formCDate": "Submitted on",
+    "formCDateHint": "Leave empty to use today.",
+    "note": "Note",
+    "saved": "Record saved"
+  }
+}

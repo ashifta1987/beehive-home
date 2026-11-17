@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Unbounded, Noto_Sans_Malayalam, Noto_Sans_Devanagari } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
+import { ThemeScript } from "@/components/portal/theme-script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -29,7 +30,10 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
   return (
-    <html lang={locale} className={`${inter.variable} ${unbounded.variable} ${malayalam.variable} ${devanagari.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${unbounded.variable} ${malayalam.variable} ${devanagari.variable}`}>
+      <head>
+        <ThemeScript />
+      </head>
       <body className="min-h-dvh">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

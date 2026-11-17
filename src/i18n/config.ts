@@ -34,3 +34,4 @@ export const NAMESPACES = [
   "posters",
 ] as const;
 export type Namespace = (typeof NAMESPACES)[number];
+

@@ -197,3 +197,4 @@ alter table public.beehive_foreign_records enable row level security;
 revoke all on table public.beehive_foreign_records from anon;
 create policy beehive_foreign_records_owner_all on public.beehive_foreign_records for all to authenticated
   using ((select public.beehive_is_owner())) with check ((select public.beehive_is_owner()));
+

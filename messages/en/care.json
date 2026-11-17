@@ -1,1 +1,88 @@
-{}
+{
+  "title": "Periodic care",
+  "subtitle": "Inspections, filters, servicing and pest control that come round again",
+  "you": "you",
+  "allApartments": "All apartments",
+  "filterLabel": "Filter care by apartment",
+  "loadError": "We could not load periodic care. Check your connection and refresh the page.",
+  "stat": {
+    "overdue": "Overdue",
+    "dueWeek": "Due this week",
+    "never": "No date yet"
+  },
+  "empty": {
+    "title": "No care schedules yet",
+    "body": "Add a schedule for each thing that must be done regularly, like cleaning AC filters every 30 days."
+  },
+  "status": {
+    "never": "Set last done date",
+    "overdue": "Overdue by {count, plural, one {# day} other {# days}}",
+    "today": "Due today",
+    "soon": "Due in {count, plural, one {# day} other {# days}} · {date}",
+    "later": "Next {date}"
+  },
+  "every": "every {count, plural, one {day} other {# days}}",
+  "who": {
+    "housekeeper": "Housekeeper",
+    "technician": "Technician",
+    "owner": "Owner"
+  },
+  "category": {
+    "hygiene": "Hygiene inspection",
+    "airfilter": "AC / air filter",
+    "purifier": "Water purifier",
+    "watertest": "Water testing",
+    "deepclean": "Deep clean",
+    "acservice": "AC service",
+    "pest": "Pest control",
+    "safety": "Safety check",
+    "other": "Other"
+  },
+  "resultLabel": {
+    "hygiene": "Findings",
+    "airfilter": "Condition of the filters",
+    "purifier": "What was done (filter or candle changed, leaks checked)",
+    "watertest": "Result (TDS reading, pass or fail, lab report number)",
+    "deepclean": "What was cleaned",
+    "acservice": "Work done",
+    "pest": "Treatment done",
+    "safety": "Findings",
+    "other": "Result"
+  },
+  "lastDone": "Last done {date}",
+  "neverDone": "Not done yet. Use “Mark done” with the date it was last done.",
+  "markDone": "Mark done",
+  "history": "History · {count}",
+  "historyTitle": "History · {name}",
+  "noHistory": "Nothing logged yet. Each “Mark done” is saved here.",
+  "by": "by {who}",
+  "done": {
+    "title": "Mark done · {name}",
+    "date": "Done on",
+    "cost": "Cost (₹)",
+    "costHint": "Record the payment in Petty cash or Expenses so it shows in Finance.",
+    "nextWillBe": "Next due: {date}",
+    "olderDate": "This date is before the last done date. It is logged in the history, but the next due date does not change.",
+    "saved": "Logged",
+    "savedNext": "Marked done. Next due {date}"
+  },
+  "form": {
+    "add": "Add schedule",
+    "addTitle": "Add a care schedule",
+    "editTitle": "Edit schedule",
+    "name": "Name",
+    "namePh": "e.g. Clean AC filters",
+    "category": "Type",
+    "everyDays": "Every (days)",
+    "who": "Who does it",
+    "vendor": "Vendor or technician",
+    "lastDone": "Last done",
+    "added": "Schedule added",
+    "saved": "Schedule saved"
+  },
+  "deleteTitle": "Delete this schedule?",
+  "deleteBody": "“{name}” and its history will be removed. This cannot be undone.",
+  "deleteLogTitle": "Delete this entry?",
+  "deleteLogBody": "This history entry will be removed. The last done date does not change.",
+  "deleted": "Deleted"
+}

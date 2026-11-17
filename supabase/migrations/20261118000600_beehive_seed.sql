@@ -89,3 +89,11 @@ from (values
   ('Extra cleaning (room left messy)', 'event', false, false)
 ) as e(name, unit, return_check, active)
 where not exists (select 1 from public.beehive_extras x where x.name = e.name);
+
+
+-- Door keys for the QR posters (random; rotate from the Posters page)
+insert into public.beehive_door_keys (apartment, label, door_key)
+select a.id, a.code, encode(extensions.gen_random_bytes(12), 'hex')
+from public.beehive_apartments a
+where a.id in ('apt-1bhk','apt-2bhk')
+on conflict (apartment) do nothing;

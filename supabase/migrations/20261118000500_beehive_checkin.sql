@@ -1,89 +1,74 @@
 -- Beehive Home · guest QR check-in (SPEC § 3.5, § 6)
--- beehive_door_keys, beehive_checkins, beehive_checkin_photos and the functions
--- beehive_door_info / beehive_submit_checkin may already be live. This migration only
--- creates what is missing and extends the rest; it never drops or replaces them.
+-- Dedicated Beehive project: tables are created fresh. ID photos live only in the
+-- private Storage bucket beehive-ids; beehive_checkin_files indexes them (no base64 table).
 
-create table if not exists public.beehive_door_keys (
-  apartment text primary key,
+create table public.beehive_door_keys (
+  apartment text primary key references public.beehive_apartments(id) on delete cascade,
   label text,
-  door_key text not null
+  door_key text not null check (length(door_key) >= 16),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz
 );
+create or replace trigger beehive_door_keys_updated_at before update on public.beehive_door_keys
+  for each row execute function public.beehive_set_updated_at();
 
-create table if not exists public.beehive_checkins (
+create table public.beehive_checkins (
   id uuid primary key default gen_random_uuid(),
-  apartment text not null,
-  created_at timestamptz not null default now()
+  apartment text not null references public.beehive_apartments(id),
+  full_name text,
+  phone text,
+  adults int,
+  children int,
+  check_out date,
+  is_foreign boolean not null default false,
+  id_type text,
+  nationality text,
+  passport_no text,
+  passport_expiry date,
+  visa_no text,
+  visa_type text,
+  visa_expiry date,
+  arrived_india date,
+  arriving_from text,
+  next_destination text,
+  lang text,
+  rules_accepted_at timestamptz,
+  has_photo boolean not null default false,
+  photo_count int not null default 0,
+  booking_id uuid references public.beehive_bookings(id) on delete set null,
+  reviewed boolean not null default false,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz
 );
-alter table public.beehive_checkins
-  add column if not exists full_name text,
-  add column if not exists phone text,
-  add column if not exists adults int,
-  add column if not exists children int,
-  add column if not exists check_out date,
-  add column if not exists is_foreign boolean default false,
-  add column if not exists id_type text,
-  add column if not exists nationality text,
-  add column if not exists passport_no text,
-  add column if not exists passport_expiry date,
-  add column if not exists visa_no text,
-  add column if not exists visa_type text,
-  add column if not exists visa_expiry date,
-  add column if not exists arrived_india date,
-  add column if not exists arriving_from text,
-  add column if not exists next_destination text,
-  add column if not exists lang text,
-  add column if not exists rules_accepted_at timestamptz,
-  add column if not exists has_photo boolean default false,
-  add column if not exists photo_count int default 0,
-  add column if not exists booking_id uuid references public.beehive_bookings(id) on delete set null,
-  add column if not exists reviewed boolean not null default false;
-create index if not exists beehive_checkins_apartment_created_idx on public.beehive_checkins(apartment, created_at);
-create index if not exists beehive_checkins_booking_idx on public.beehive_checkins(booking_id);
+create index beehive_checkins_apartment_created_idx on public.beehive_checkins(apartment, created_at);
+create index beehive_checkins_booking_idx on public.beehive_checkins(booking_id);
+create or replace trigger beehive_checkins_updated_at before update on public.beehive_checkins
+  for each row execute function public.beehive_set_updated_at();
 
-create table if not exists public.beehive_checkin_photos (
-  checkin_id uuid primary key,
-  mime text,
-  data text
-);
-
--- New: photos live in the private beehive-ids bucket; this table indexes them.
-create table if not exists public.beehive_checkin_files (
+create table public.beehive_checkin_files (
   id uuid primary key default gen_random_uuid(),
   checkin_id uuid not null references public.beehive_checkins(id) on delete cascade,
   path text not null unique,
   mime text not null default 'image/jpeg',
   created_at timestamptz not null default now()
 );
-create index if not exists beehive_checkin_files_checkin_idx on public.beehive_checkin_files(checkin_id);
+create index beehive_checkin_files_checkin_idx on public.beehive_checkin_files(checkin_id);
 
 alter table public.beehive_door_keys enable row level security;
 alter table public.beehive_checkins enable row level security;
-alter table public.beehive_checkin_photos enable row level security;
 alter table public.beehive_checkin_files enable row level security;
 revoke all on table public.beehive_door_keys from anon;
 revoke all on table public.beehive_checkins from anon;
-revoke all on table public.beehive_checkin_photos from anon;
 revoke all on table public.beehive_checkin_files from anon;
 
--- Owner-only access (door keys are needed by the owner for posters and rotation).
-drop policy if exists beehive_door_keys_owner_all on public.beehive_door_keys;
+-- Owner-only access. Guests act only through the security definer functions below
+-- and the upload route (service role).
 create policy beehive_door_keys_owner_all on public.beehive_door_keys for all to authenticated
   using ((select public.beehive_is_owner())) with check ((select public.beehive_is_owner()));
-drop policy if exists beehive_checkins_owner_all on public.beehive_checkins;
 create policy beehive_checkins_owner_all on public.beehive_checkins for all to authenticated
   using ((select public.beehive_is_owner())) with check ((select public.beehive_is_owner()));
-drop policy if exists beehive_checkin_photos_owner_select on public.beehive_checkin_photos;
-create policy beehive_checkin_photos_owner_select on public.beehive_checkin_photos for select to authenticated
-  using ((select public.beehive_is_owner()));
-drop policy if exists beehive_checkin_files_owner_select on public.beehive_checkin_files;
 create policy beehive_checkin_files_owner_select on public.beehive_checkin_files for select to authenticated
   using ((select public.beehive_is_owner()));
-
--- Door keys for the two apartments (random, only if missing).
-insert into public.beehive_door_keys (apartment, label, door_key)
-values ('apt-1bhk', '1BHK', replace(gen_random_uuid()::text, '-', '')),
-       ('apt-2bhk', '2BHK', replace(gen_random_uuid()::text, '-', ''))
-on conflict (apartment) do nothing;
 
 -- Guest-facing functions ---------------------------------------------------
 -- What a guest may see before submitting: name, code, check-out time, house rules.
@@ -168,3 +153,4 @@ on conflict (id) do nothing;
 drop policy if exists beehive_ids_owner_select on storage.objects;
 create policy beehive_ids_owner_select on storage.objects for select to authenticated
   using (bucket_id = 'beehive-ids' and (select public.beehive_is_owner()));
+

@@ -1,1 +1,79 @@
-{}
+{
+  "title": "Assets & inventory",
+  "subtitle": "Everything in the apartments. Items counted at checkout catch missing things the same day.",
+  "allApartments": "All apartments",
+  "filterLabel": "Filter items by apartment",
+  "groupLabel": "Group items",
+  "group": {
+    "room": "By room",
+    "category": "By type"
+  },
+  "loadError": "We could not load the items. Check your connection and refresh the page.",
+  "stat": {
+    "items": "Items",
+    "counted": "Counted at checkout",
+    "value": "Recorded value",
+    "warranty": "Warranty ends ≤ 60 days"
+  },
+  "empty": {
+    "title": "No items recorded yet",
+    "body": "Tap “Add item” for towels, remotes, appliances and furniture. Turn on “Count at checkout” for things guests could take."
+  },
+  "noItemsApt": "No items recorded for this apartment.",
+  "aptSummary": "{count, plural, one {# item} other {# items}} · {value}",
+  "noRoom": "No room set",
+  "category": {
+    "appliance": "Appliance",
+    "electronics": "Electronics",
+    "furniture": "Furniture",
+    "linen": "Linen & towels",
+    "kitchen": "Kitchen",
+    "bathroom": "Bathroom",
+    "decor": "Decor",
+    "safety": "Safety",
+    "other": "Other"
+  },
+  "valueEach": "{each} each · {total}",
+  "serial": "S/N {serial}",
+  "bought": "bought {date}",
+  "countedPill": "Counted",
+  "warrantyUntil": "Warranty to {date}",
+  "warrantyEnded": "Warranty ended {date}",
+  "form": {
+    "add": "Add item",
+    "addTitle": "Add an item",
+    "editTitle": "Edit item",
+    "name": "Item",
+    "namePh": "e.g. Bath towel, TV remote, Split AC",
+    "category": "Type",
+    "room": "Room",
+    "roomPh": "Bedroom 1, Hall, Pantry",
+    "qty": "Quantity",
+    "value": "Value per item (₹)",
+    "countOnCheckout": "Count at checkout",
+    "countHint": "The housekeeper counts it after every guest leaves.",
+    "purchased": "Bought on",
+    "warranty": "Warranty until",
+    "serial": "Serial number",
+    "added": "Item added",
+    "saved": "Item saved"
+  },
+  "deleteTitle": "Delete this item?",
+  "deleteBody": "“{name}” will be removed from the inventory. This cannot be undone.",
+  "deleted": "Item deleted",
+  "theft": {
+    "title": "Theft control",
+    "intro": "Missing items found at checkout create an urgent maintenance report linked to the guest. Settle with the guest or deduct it from the security deposit before it is refunded.",
+    "counted": "Counted at checkout",
+    "noCounted": "Nothing is counted yet. Edit an item and turn on “Count at checkout”.",
+    "missing": "Missing-item reports",
+    "noneMissing": "None reported.",
+    "open": "Open",
+    "resolved": "Resolved",
+    "checks": "Recent checkout counts",
+    "noChecks": "No counts yet. They appear after the housekeeper does an inventory check on a turnover job.",
+    "missingCount": "{count} missing",
+    "complete": "Complete",
+    "guest": "Guest"
+  }
+}

@@ -41,7 +41,7 @@ begin
     select coalesce(array_agg(be.name || case when be.qty > 1 then ' ×' || be.qty else '' end order by be.date), '{}')
       into v_setup
       from public.beehive_booking_extras be
-     where be.booking_id = b.id and be.status <> 'cancelled';
+     where be.booking_id = b.id and be.status <> 'cancelled' and be.extra_id is not null;
 
     select coalesce(array_agg(be.name || case when be.qty > 1 then ' ×' || be.qty else '' end order by be.date), '{}')
       into v_collect
@@ -139,3 +139,4 @@ begin
 end $$;
 revoke all on function public.beehive_sync_all_tasks() from public, anon, authenticated;
 grant execute on function public.beehive_sync_all_tasks() to service_role;
+

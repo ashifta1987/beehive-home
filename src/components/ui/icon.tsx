@@ -53,3 +53,4 @@ export function Icon({ name, size = 22, strokeWidth = 2, ...props }: { name: Ico
     </svg>
   );
 }
+

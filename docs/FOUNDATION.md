@@ -88,3 +88,4 @@ Several agents build modules at the same time in this folder.
   `npm run build` / `npm run dev` / `npm install` (they clash with other agents); if you need a
   new package, ask the coordinator. If tsc shows errors in files you do not own, ignore them.
 - Do not commit; the coordinator commits.
+

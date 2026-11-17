@@ -1,1 +1,58 @@
-{}
+{
+  "title": "Laundry",
+  "subtitle": "Linen and towels sent out and returned. Short returns are flagged.",
+  "loadError": "We could not load the laundry. Check your connection and refresh the page.",
+  "filterLabel": "Show laundry",
+  "filter": {
+    "out": "At laundry",
+    "returned": "Returned",
+    "all": "All"
+  },
+  "stat": {
+    "out": "At laundry",
+    "outValue": "{batches} · {pieces, plural, one {# pc} other {# pcs}}",
+    "short": "Short returns",
+    "bills": "Bills · {month}"
+  },
+  "empty": {
+    "title": "No laundry yet",
+    "body": "When linen goes to the laundry, tap “Send laundry” and enter the number of pieces."
+  },
+  "noneOut": "Nothing at the laundry right now.",
+  "noneReturned": "Nothing returned yet.",
+  "pieces": "{count, plural, one {# piece} other {# pieces}}",
+  "short": "{count} short",
+  "returned": "Returned",
+  "outDays": "Out {count, plural, =0 {today} one {# day} other {# days}}",
+  "outLate": "Out {count} days",
+  "sent": "Sent {date}",
+  "sentTo": "Sent {date} to {vendor}",
+  "back": "back {date} ({count, plural, one {# piece} other {# pieces}})",
+  "form": {
+    "add": "Send laundry",
+    "addTitle": "Send laundry",
+    "editTitle": "Edit laundry batch",
+    "send": "Save",
+    "sentDate": "Sent on",
+    "items": "Pieces sent",
+    "vendor": "Laundry",
+    "details": "What was sent",
+    "detailsPh": "e.g. 4 bedsheets, 8 pillow covers, 6 bath towels",
+    "added": "Laundry batch saved",
+    "saved": "Saved"
+  },
+  "ret": {
+    "button": "Mark returned",
+    "title": "Mark returned",
+    "intro": "{count, plural, one {# piece was} other {# pieces were}} sent. Count what came back.",
+    "date": "Returned on",
+    "items": "Pieces returned",
+    "cost": "Bill (₹)",
+    "costHint": "Record the payment in Petty cash or Expenses so it shows in Finance.",
+    "savedToast": "Marked returned",
+    "shortToast": "Returned {count} short. Ask the laundry."
+  },
+  "deleteTitle": "Delete this laundry batch?",
+  "deleteBody": "The batch will be removed. This cannot be undone.",
+  "deleted": "Deleted"
+}
