@@ -4,6 +4,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { cn, tagClasses } from "@/lib/ui";
 import type { PortalLocale } from "./checkin-schema";
+import { Logo } from "@/components/brand/logo";
 
 export type PortalMessages = Record<PortalLocale, Record<string, unknown>>;
 
@@ -58,17 +59,9 @@ export function LangSwitch({ value, onChange }: { value: PortalLocale; onChange:
   );
 }
 
-/** Small tilted mango tag + wordmark. */
+/** Beehive Home logo for the guest portal header. */
 export function BrandRow() {
-  const t = useTranslations("portal");
-  return (
-    <span className="flex items-center gap-2.5">
-      <span aria-hidden className="flex h-[30px] w-[26px] -rotate-6 justify-center rounded-[8px] bg-tag1 pt-1">
-        <span className="h-2 w-2 rounded-full border-2 border-tag1-ink bg-bg" />
-      </span>
-      <span className="font-display text-[15px] font-extrabold">{t("brand")}</span>
-    </span>
-  );
+  return <Logo size={14} />;
 }
 
 /** The big tilted apartment key tag on the welcome screen. */

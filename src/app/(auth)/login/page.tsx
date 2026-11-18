@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
 import { LoginForm } from "./login-form";
+import { Logo } from "@/components/brand/logo";
 
 export const metadata: Metadata = { title: "Sign in" };
 
@@ -12,10 +13,8 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   return (
     <main className="gutter flex min-h-dvh flex-col items-center justify-center py-10">
       <div className="flex w-full max-w-[400px] flex-col gap-5">
-        <div className="relative mx-auto flex w-[220px] -rotate-2 flex-col items-center gap-1 rounded-[26px] bg-tag1 px-5 pb-5 pt-4 text-tag1-ink shadow-tag">
-          <span className="tag-hole" />
-          <span className="mt-2 font-display text-[26px] font-extrabold leading-none tracking-[-0.03em]">Beehive</span>
-          <span className="text-[12px] font-bold uppercase tracking-[0.08em]">Home · Kochi</span>
+        <div className="mx-auto rounded-[24px] bg-ink px-6 py-6 text-surface shadow-tag">
+          <Logo size={22} tagline />
         </div>
         <LoginForm next={sp.next ?? ""} expired={sp.error === "expired"} />
       </div>

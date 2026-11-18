@@ -11,6 +11,7 @@ import { buttonClass } from "@/components/ui/button";
 import { EmptyState, ErrorBox } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { PrintButton, RotateKey } from "./poster-controls";
+import { Logo } from "@/components/brand/logo";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Door posters", robots: { index: false, follow: false }, referrer: "no-referrer" };
@@ -113,7 +114,7 @@ export default async function PostersPage() {
                         <li lang="ml" className="flex gap-2"><span className="w-6 flex-none font-bold">ML</span><span>{t("lineMl")}</span></li>
                         <li lang="hi" className="flex gap-2"><span className="w-6 flex-none font-bold">HI</span><span>{t("lineHi")}</span></li>
                       </ol>
-                      <span className="text-[clamp(9px,2.6vw,11.5px)] font-semibold opacity-70">{t("footer")}</span>
+                      <Logo size={12} tagline className="text-black" />
                     </div>
                   </article>
                 ) : (

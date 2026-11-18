@@ -6,6 +6,7 @@ import { useState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import type { Role } from "@/lib/types";
 import { cn } from "@/lib/ui";
+import { Logo } from "@/components/brand/logo";
 import { Icon } from "@/components/ui/icon";
 import { Sheet } from "@/components/ui/sheet";
 import { ToastProvider } from "@/components/ui/toast";
@@ -57,11 +58,8 @@ export function AppShell({
       <div className="mx-auto flex min-h-dvh w-full max-w-[1440px] gap-5 min-[960px]:p-4">
         {/* Sidebar ≥ 960 px */}
         <aside className="no-print sticky top-4 hidden h-[calc(100dvh-2rem)] w-[248px] flex-none flex-col overflow-y-auto rounded-[24px] bg-surface p-4 min-[960px]:flex">
-          <Link href={role === "owner" ? "/today" : "/jobs"} className="mb-4 flex items-center gap-2.5 px-2">
-            <span className="flex h-9 w-9 flex-col items-center justify-start rounded-[10px] bg-tag1 pt-1.5 text-tag1-ink">
-              <span className="tag-hole !h-3 !w-3 !border-2" />
-            </span>
-            <span className="font-display text-[16px] font-extrabold tracking-[-0.03em]">Beehive Home</span>
+          <Link href={role === "owner" ? "/today" : "/jobs"} className="mb-5 flex justify-center px-1 pt-1">
+            <Logo size={15} tagline />
           </Link>
           <nav aria-label={t("main")} className="flex flex-1 flex-col gap-4">
             {groups.map((g) => (
